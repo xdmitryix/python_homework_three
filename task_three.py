@@ -35,3 +35,15 @@ letters = {
             'Q':10, 'Z':10, 'Ф':10, 'Щ':10, 'Ъ':10
             }
 print(letters)
+word = str(input('введи слово: '))
+word_len = len(word)
+sum = 0
+for i in range(word_len):
+    for k, v in letters.items():
+        if word.upper()[i] == k:          
+            sum += v
+            break
+if sum <= 0:
+    print('некорректный ввод !')
+else:
+    print('стоимость слова =', sum)
